@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<title>Board Detail</title>
+	<link rel="stylesheet" th:href="@{/css/style.css}"/>
+</head>
+<body>
+	<div class="container">
+		<h2>Board Detail</h2>
+	    <form id="frm" method="post">
+	    	<table class="board_detail">
+				<colgroup>
+					<col width="15%"/>
+					<col width="35%"/>
+					<col width="15%"/>
+					<col width="35%"/>
+				</colgroup>
+				<caption>Writing Detail</caption>
+				<tbody>
+					<tr>
+						<th scope="row">Number</th>
+						<td th:text="${board.boardIdx }"></td>
+						<th scope="row">Hit</th>
+						<td th:text="${board.hitCnt }"></td>
+					</tr>
+					<tr>
+						<th scope="row">Writer</th>
+						<td th:text="${board.creatorId }"></td>
+						<th scope="row">Write Date</th>
+						<td th:text="${board.createdDatetime }"></td>
+					</tr>
+					<tr>
+						<th scope="row">Title</th>
+						<td colspan="3"><input type="text" id="title" name="title" th:value="${board.title }"/></td>
+					</tr>
+					<tr>
+						<td colspan="4" class="view_text">
+							<textarea title="내용" id="contents" name="contents" th:text="${board.contents }"></textarea>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<input type="hidden" id="boardIdx" name="boardIdx" th:value="${board.boardIdx }">
+		</form>
+		
+		<a href="#this" id="list" class="btn">List</a>
+		<a href="#this" id="edit" class="btn">Modify</a>
+		<a href="#this" id="delete" class="btn">Delete</a>
+	</div>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#list").on("click", function(){
+				location.href = "/board/openBoardList.do";
+			});
+			
+			$("#edit").on("click", function(){
+				var frm = $("#frm")[0];
+				frm.action = "/board/updateBoard.do";
+				frm.submit();
+			});
+			
+			$("#delete").on("click", function(){
+				var frm = $("#frm")[0];
+				frm.action = "/board/deleteBoard.do";
+				frm.submit();
+			});
+		});
+	</script>
+</body>
+</html>
