@@ -7,11 +7,12 @@ The project is a bulletin board project. There are only basic _Crud(Create, Read
  > 2. Jquery
 
 ### 2. Back End
-> 1. Spring boot 2.2.2
+> 1. Spring boot 2.2.1
 > 2. Gradle
 > 3. Java 8
 > 4. MySql
 > 5. lombok
+> 6. logger
 
 ### 3. DB
 |  <center>Filed Name</center> |  <center>Data Type</center> |  <center>Length</center> | <center>Default</center> | <center>PK</center> |  <center>Not Null</center> |  <center>auto_increment</center> |
