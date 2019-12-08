@@ -1,5 +1,5 @@
 # Board
-The project is a bulletin board project. There are only basic _Crud(Create, Read, Update, Delte)_ functions.
+The project is a bulletin board project. There are only basic _Crud(Create, Read, Update, Delete)_ functions.
 
 ## Information
 ### 1. Front End
