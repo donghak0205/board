@@ -26,3 +26,8 @@ The project is a bulletin board project. There are only basic _Crud(Create, Read
 |**updated_datetime** | <center>datetime </center> | | | | | |
 |**updater_id** | <center>varchar </center> |50 | | | | |
 |**deleted_yn** | <center>char</center> |1|N | | O||
+
+## 4. Example
+> ![readMe1](https://user-images.githubusercontent.com/58127426/70388811-097e1e00-19fa-11ea-9195-51e27b6f514e.jpg)
+> ![readMe2](https://user-images.githubusercontent.com/58127426/70388815-26b2ec80-19fa-11ea-9e75-fc1c69ae4f7d.jpg)
+> ![readMe3](https://user-images.githubusercontent.com/58127426/70388819-2dd9fa80-19fa-11ea-999c-0515618494a3.jpg)
